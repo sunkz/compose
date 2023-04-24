@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+        - 27017:27017
+    volumes:
+        - ./datadir:/data/db
+    command: mongod --auth
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=123456
+    tty: true

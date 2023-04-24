@@ -1,0 +1,53 @@
+# basic
+title: Sunkz
+subtitle: 
+favicon: https://s2.ax1x.com/2019/09/23/uPV4Bt.jpg
+
+# avatar: images/avatar.png
+# banner_small: images/banner-small.png
+# banner_large: images/banner-large.png
+logo: https://s2.ax1x.com/2019/09/23/uPV5HP.png
+
+# disqus
+disqus_shortname: sunkz
+
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace:
+
+# nav #
+nav:
+  home: .
+  archive: archives
+  # about: about
+  # rss: atom.xml
+
+# hexo-renderer-sass
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
+# Default post title
+default_post_title: Untitled
+
+# social
+social:
+  github: https://github.com/sunkz
+  weibo: http://weibo.com/6606919614
+  mail: mailto:sun_kz@icloud.com
+  twitter: https://twitter.com/sunkezheng
+
+baidu_analytics: 95301c75480a40f236f01d08497a50b5
+google_analytics: UA-134339565-1
+
+# widget
+#   title: 标题
+#   content: 内容
+widget:
+  title: Sunkz
+  content: Stay Hungry Stay Foolish
+
+footer: Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a>
