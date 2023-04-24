@@ -1,7 +1,29 @@
-#### hexo X docker-compose
+#### hexo + docker
 
-博客路径 : datadir/_posts
-<br>
-静态页面路径 : datadir/public
+docker-compose : https://hub.docker.com/r/sunkezheng/hexo
 
-本地访问: localhost:4000
+
+step1.创建 ./_posts/blog.md
+```md
+---
+title: title
+author: author
+date: 2018-01-01 00:10:00
+---
+content
+```
+step2 : 创建 docker-compose.yml
+```yml
+version: '3'
+services:
+  hexo:
+    image: sunkezheng/hexo:latest
+    container_name: hexo
+    volumes:
+      - ./_posts:/app/source/_posts
+    ports:
+      - 4000:4000
+```
+step3 : docker-compose up
+<br><br>
+step4 : http://localhost:4000
