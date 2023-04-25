@@ -1,6 +1,6 @@
 #### hexo + docker
 
-docker-compose : https://hub.docker.com/r/sunkezheng/hexo
+docker-hub image : https://hub.docker.com/r/sunkezheng/hexo
 
 
 step1.创建 ./_posts/blog.md
