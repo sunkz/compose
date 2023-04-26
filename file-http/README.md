@@ -1,5 +1,5 @@
 ### http file download
-
+#### demo : https://hub.docker.com/r/sunkezheng/file-http
 step1.创建 ./books 并将文件移至改目录
 <br>
 step2 : 创建 docker-compose.yml
@@ -16,4 +16,4 @@ services:
 ```
 step3 : docker-compose up
 <br>
-step4 : 同居局域网其他设备访问 http://{docker 所在主机 ip}
+step4 : http://{docker 所在主机 ip}
