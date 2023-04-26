@@ -1,0 +1,9 @@
+version: '3'
+services:
+  file-http:
+    image: sunkezheng/file-http:latest
+    container_name: file-http
+    volumes:
+      - ./datadir/:/root/books
+    ports:
+      - 80:80
