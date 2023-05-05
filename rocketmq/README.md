@@ -48,7 +48,7 @@ services:
 ```
 ### step3 : docker-compose up -d  &  docker-compose down
 
-### step4 : localhost:8080/
+### step4 : localhost:8082/
 
 ### RocketMQ-Spring-Boot-Starter
 https://github.com/apache/rocketmq-spring/wiki
