@@ -16,3 +16,4 @@ target/
 /mysql/datadir/
 /mongo/datadir/
 /hexo/datadir/public/
+/nacos/datadir/
