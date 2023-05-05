@@ -1,0 +1,7 @@
+version: '3'
+services:
+  sentinel-dashboard:
+    image: sunkezheng/sentinel-dashboard
+    container_name: sentinel-dashboard
+    ports:
+      - 8081:8080
