@@ -22,6 +22,7 @@ highlight:
 nav:
   home: .
   archive: archives
+  tools : tools
   # about: about
   # rss: atom.xml
 
