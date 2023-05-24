@@ -4,7 +4,7 @@ services:
     image: sunkezheng/hexo:latest
     container_name: hexo
     volumes:
-      - ./datadir/_posts:/app/source/_posts
+      - ./datadir/source:/app/source
       - ./datadir/public:/app/public
     ports:
       - 4000:4000
