@@ -17,3 +17,4 @@ target/
 /mongo/datadir/
 /hexo/datadir/public/
 /nacos/datadir/
+/es/datadir/
