@@ -2,7 +2,7 @@ version: '3'
 services:
   mysql:
     restart: always
-    image: mysql:latest
+    image: mysql:8.0
     container_name: mysql
     volumes:
       - ./datadir:/var/lib/mysql
