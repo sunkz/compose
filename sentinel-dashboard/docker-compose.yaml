@@ -5,3 +5,4 @@ services:
     container_name: sentinel-dashboard
     ports:
       - 8081:8080
+
