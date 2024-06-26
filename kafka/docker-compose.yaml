@@ -1,7 +1,7 @@
-version: '3.8'
+version: '3'
 services:
   zookeeper:
-    image: confluentinc/cp-zookeeper:latest
+    image: confluentinc/cp-zookeeper
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
@@ -9,7 +9,7 @@ services:
       - "2181:2181"
 
   kafka:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka
     depends_on:
       - zookeeper
     ports:
@@ -17,26 +17,15 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://10.115.120.24:9092,PLAINTEXT_HOST://10.115.120.24:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-  control-center:
-    image: confluentinc/cp-enterprise-control-center:latest
-    depends_on:
-      - kafka
-      - zookeeper
+  kafka-manager:
+    image: hlebalbau/kafka-manager
     ports:
-      - "9021:9021"
+      - "9000:9000"
     environment:
-      CONTROL_CENTER_BOOTSTRAP_SERVERS: kafka:9092
-      CONTROL_CENTER_ZOOKEEPER_CONNECT: zookeeper:2181
-      CONTROL_CENTER_REPLICATION_FACTOR: 1
-      CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 1
-      CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 1
-      CONTROL_CENTER_CONNECT_CLUSTER: connect:8083
-
-volumes:
-  zookeeper_data:
-  kafka_data:
+      ZK_HOSTS: zookeeper:2181
+      APPLICATION_SECRET: letmein
