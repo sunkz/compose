@@ -9,6 +9,7 @@ target/
 .classpath
 .factorypath
 .vscode/
+/kafka/datadir/
 /rocketmq/datadir/broker/logs/
 /rocketmq/datadir/broker/store/
 /rocketmq/datadir/namesrv/logs/
