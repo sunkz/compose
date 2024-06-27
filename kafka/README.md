@@ -1,3 +1,3 @@
-修改 PLAINTEXT: <本机IP>
+修改 .env 的 ip
 
-manage : add-cluster : <本机IP>:2181
+kafka-manage : add-cluster : <本机IP>:2181
