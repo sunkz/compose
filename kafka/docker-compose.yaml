@@ -5,11 +5,6 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
-      ZOOKEEPER_DATA_DIR: /var/lib/zookeeper/data
-      ZOOKEEPER_LOG_DIR: /var/lib/zookeeper/log
-    volumes:
-      - ./datadir/zookeeper/data:/var/lib/zookeeper/data
-      - ./datadir/zookeeper/log:/var/lib/zookeeper/log
     ports:
       - "2181:2181"
 
@@ -26,9 +21,6 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_LOG_DIRS: /var/lib/kafka/data
-    volumes:
-      - ./datadir/kafka/data:/var/lib/kafka/data
 
   kafka-manager:
     image: hlebalbau/kafka-manager
