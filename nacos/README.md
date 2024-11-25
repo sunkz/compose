@@ -1,7 +1,6 @@
 ### 登录
 > http://localhost:8848/nacos/ <br> 
-> username=nacos
-> pasword=nacos
+
 ### 配置
 ```shell
 DataId: nacos-config.properties (dataId包含后缀名)
